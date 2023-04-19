@@ -4,27 +4,16 @@ import {
   Text,
   IconButton,
   Button,
-  Stack,
   Collapse,
-  Icon,
-  Link,
-  Popover,
-  PopoverTrigger,
-  PopoverContent,
   useColorModeValue,
   useBreakpointValue,
   useDisclosure,
   HStack,
 } from "@chakra-ui/react";
-import {
-  MdMenu as HamburgerIcon,
-  MdClose as CloseIcon,
-  MdKeyboardArrowDown as ChevronDownIcon,
-  MdChevronRight as ChevronRightIcon,
-} from "react-icons/md";
-import { ColorModeSwitcher } from "../ColorModeSwitcher";
+import { MdMenu as HamburgerIcon, MdClose as CloseIcon } from "react-icons/md";
+import { ColorModeSwitcher } from "../../ColorModeSwitcher";
 import { MobileNav } from "./MobileNav";
-import { NavItem } from "../@types/NavItem";
+import { NavItem } from "../../@types/NavItem";
 import { DesktopNav } from "./DesktopNav";
 
 export const NavBar = () => {

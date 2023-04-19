@@ -11,7 +11,7 @@ import {
 } from "@chakra-ui/react";
 import { ColorModeSwitcher } from "./ColorModeSwitcher";
 import { Logo } from "./Logo";
-import { NavBar } from "./Components/Navbar";
+import { NavBar } from "./Components/Nav/Navbar";
 
 export const App = () => (
   <ChakraProvider theme={theme}>

@@ -1,12 +1,5 @@
-import {
-  Stack,
-  Flex,
-  Text,
-  Link,
-  useColorModeValue,
-  useDisclosure,
-} from "@chakra-ui/react";
-import { NavItem } from "../@types/NavItem";
+import { Stack, Flex, Text, Link, useColorModeValue } from "@chakra-ui/react";
+import { NavItem } from "../../@types/NavItem";
 
 export const MobileNav = ({ navItems }: { navItems: NavItem[] }) => {
   return (

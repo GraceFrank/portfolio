@@ -1,12 +1,5 @@
-import {
-  Stack,
-  Flex,
-  Text,
-  Link,
-  useColorModeValue,
-  useDisclosure,
-} from "@chakra-ui/react";
-import { NavItem } from "../@types/NavItem";
+import { Stack, Link, useColorModeValue } from "@chakra-ui/react";
+import { NavItem } from "../../@types/NavItem";
 
 export const DesktopNav = ({ navItems }: { navItems: NavItem[] }) => {
   const linkColor = useColorModeValue("gray.600", "gray.200");
