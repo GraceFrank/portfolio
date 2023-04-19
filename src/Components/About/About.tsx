@@ -1,11 +1,9 @@
 import {
   Box,
   Button,
-  Divider,
   HStack,
   Heading,
   Image,
-  Link,
   Stack,
   Text,
   useColorModeValue,

@@ -8,7 +8,6 @@ import {
 } from "@chakra-ui/react";
 
 export const HeroSection = () => {
-  const purple = useColorModeValue("gray.700", "purple.200");
   return (
     <VStack height="100vh" justify={"center"} alignItems={"start"}>
       <Stack>

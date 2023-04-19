@@ -6,6 +6,7 @@ import AOS from "aos";
 import { extendTheme } from "@chakra-ui/react";
 
 import "aos/dist/aos.css"; // You can also use <link> for styles
+import { ExperienceSection } from "./Components/Experience/Experience";
 // ..
 AOS.init();
 // 1. import `extendTheme` function
@@ -29,6 +30,7 @@ export const App = () => {
         <Box px={[8, 40]}>
           <HeroSection />
           <AboutSection />
+          <ExperienceSection />
         </Box>
       </Box>
     </ChakraProvider>
