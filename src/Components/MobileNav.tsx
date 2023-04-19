@@ -2,15 +2,11 @@ import {
   Stack,
   Flex,
   Text,
-  Icon,
   Link,
   useColorModeValue,
   useDisclosure,
-  Collapse,
 } from "@chakra-ui/react";
 import { NavItem } from "../@types/NavItem";
-
-import { MdKeyboardArrowDown as ChevronDownIcon } from "react-icons/md";
 
 export const MobileNav = ({ navItems }: { navItems: NavItem[] }) => {
   return (
@@ -30,9 +26,7 @@ export const MobileNav = ({ navItems }: { navItems: NavItem[] }) => {
   );
 };
 
-const MobileNavItem = ({ label, children, href }: NavItem) => {
-  const { isOpen, onToggle } = useDisclosure();
-
+const MobileNavItem = ({ label, href }: NavItem) => {
   return (
     <Stack spacing={4}>
       <Flex
@@ -47,7 +41,7 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
       >
         <Text
           fontWeight={600}
-          color={useColorModeValue("gray.600", "gray.200")}
+          color={useColorModeValue("purple.600", "purple.200")}
         >
           {label}
         </Text>

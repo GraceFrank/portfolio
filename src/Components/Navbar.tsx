@@ -25,6 +25,7 @@ import {
 import { ColorModeSwitcher } from "../ColorModeSwitcher";
 import { MobileNav } from "./MobileNav";
 import { NavItem } from "../@types/NavItem";
+import { DesktopNav } from "./DesktopNav";
 
 export const NavBar = () => {
   const { isOpen, onToggle } = useDisclosure();
@@ -35,8 +36,8 @@ export const NavBar = () => {
         bg={useColorModeValue("white", "gray.800")}
         color={useColorModeValue("gray.600", "white")}
         minH={"60px"}
-        py={{ base: 2 }}
-        px={{ base: 4 }}
+        py={{ base: 2, md: 4 }}
+        px={{ base: 4, md: 10 }}
         borderBottom={1}
         borderStyle={"solid"}
         borderColor={useColorModeValue("gray.200", "gray.900")}
@@ -55,11 +56,12 @@ export const NavBar = () => {
           />
         </Flex>
         <Flex flex={{ base: 1 }} justify={{ base: "center", md: "start" }}>
+          {/* logo */}
           <Text
             textAlign={useBreakpointValue({ base: "center", md: "left" })}
             fontFamily={"heading"}
             fontWeight={"bold"}
-            fontSize={"lg"}
+            fontSize={{ base: "lg", md: "2xl" }}
             color="gray.500"
           >
             &lt;
@@ -74,7 +76,7 @@ export const NavBar = () => {
         </Flex>
 
         <Flex display={{ base: "none", md: "flex" }} ml={10}>
-          <DesktopNav />
+          <DesktopNav navItems={NAV_ITEMS} />
         </Flex>
         <HStack
           flex={{ base: 1, md: 0 }}
@@ -89,38 +91,6 @@ export const NavBar = () => {
         <MobileNav navItems={NAV_ITEMS} />
       </Collapse>
     </Box>
-  );
-};
-
-const DesktopNav = () => {
-  const linkColor = useColorModeValue("gray.600", "gray.200");
-  const linkHoverColor = useColorModeValue("gray.800", "white");
-  const popoverContentBgColor = useColorModeValue("white", "gray.800");
-
-  return (
-    <Stack direction={"row"} spacing={4}>
-      {NAV_ITEMS.map((navItem) => (
-        <Box key={navItem.label}>
-          <Popover trigger={"hover"} placement={"bottom-start"}>
-            <PopoverTrigger>
-              <Link
-                p={2}
-                href={navItem.href ?? "#"}
-                fontSize={"sm"}
-                fontWeight={500}
-                color={linkColor}
-                _hover={{
-                  textDecoration: "none",
-                  color: linkHoverColor,
-                }}
-              >
-                {navItem.label}
-              </Link>
-            </PopoverTrigger>
-          </Popover>
-        </Box>
-      ))}
-    </Stack>
   );
 };
 
@@ -140,5 +110,13 @@ const NAV_ITEMS: Array<NavItem> = [
   {
     label: "Contact",
     href: "#contact",
+  },
+  {
+    label: "Contact",
+    children: (
+      <Button size="sm" variant={"outline"} colorScheme="purple">
+        Resume
+      </Button>
+    ),
   },
 ];
