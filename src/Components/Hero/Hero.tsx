@@ -1,19 +1,16 @@
 import {
   Stack,
-  Flex,
   Text,
   Link,
   useColorModeValue,
   Heading,
   VStack,
-  Box,
 } from "@chakra-ui/react";
-import { NavItem } from "../../@types/NavItem";
 
 export const HeroSection = () => {
   const purple = useColorModeValue("gray.700", "purple.200");
   return (
-    <VStack height="90vh" justify={"center"} alignItems={"start"}>
+    <VStack height="100vh" justify={"center"} alignItems={"start"}>
       <Stack>
         <Text
           fontSize={"xl"}
@@ -21,9 +18,15 @@ export const HeroSection = () => {
         >
           &#x1F44B; Hi, my name is
         </Text>
-        <Heading size={"4xl"} color={useColorModeValue("purple.600", "white")}>
-          Grace Frank.
-        </Heading>
+        <div data-aos="flip-right">
+          <Heading
+            size={"4xl"}
+            color={useColorModeValue("purple.600", "white")}
+          >
+            Grace Frank.
+          </Heading>{" "}
+        </div>
+
         <Heading size={"2xl"} color={useColorModeValue("gray.700", "gray.500")}>
           I build things for the web.
         </Heading>

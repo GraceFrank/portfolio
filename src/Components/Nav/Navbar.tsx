@@ -15,12 +15,14 @@ import { ColorModeSwitcher } from "../../ColorModeSwitcher";
 import { MobileNav } from "./MobileNav";
 import { NavItem } from "../../@types/NavItem";
 import { DesktopNav } from "./DesktopNav";
+// @ts-ignore
+import pdf from "../../assets/grace-frank-cv.pdf";
 
 export const NavBar = () => {
   const { isOpen, onToggle } = useDisclosure();
 
   return (
-    <Box>
+    <Box width={"100vw"} position={"fixed"} background={"gray.800"} zIndex={10}>
       <Flex
         bg={useColorModeValue("white", "gray.800")}
         color={useColorModeValue("gray.600", "white")}
@@ -103,7 +105,12 @@ const NAV_ITEMS: Array<NavItem> = [
   {
     label: "Contact",
     children: (
-      <Button size="sm" variant={"outline"} colorScheme="purple">
+      <Button
+        onClick={() => window.open(pdf, "_blank")}
+        size="sm"
+        variant={"outline"}
+        colorScheme="purple"
+      >
         Resume
       </Button>
     ),
