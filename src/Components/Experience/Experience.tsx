@@ -65,7 +65,7 @@ const companies = [
   },
   {
     name: "Terragon",
-    startDate: "Feb 2022",
+    date: "May 2019 - Aug 2019 · 4 mos",
     endDate: "Feb 2022",
     achievments: [
       "Used Vanilla Javascript to develop a client-side script for tracking conversions such as signup, purchases, etc from different clients websites.",
@@ -81,7 +81,7 @@ export const ExperienceSection = () => {
   const purple = useColorModeValue("purple.600", "purple.200");
 
   return (
-    <Stack id="about" gap={5} py={20} height={"100vh"} justify={"center"}>
+    <Stack id="experience" gap={5} py={20} height={"100vh"} justify={"center"}>
       <Tabs orientation="vertical" colorScheme="purple">
         <TabList>
           {companies.map((company) => (
@@ -101,9 +101,7 @@ export const ExperienceSection = () => {
                     @ &nbsp;{company.name}
                   </Text>
                 </Heading>
-                <Text color="gray.500">
-                  {company.startDate} - {company.endDate}
-                </Text>
+                <Text color="gray.500">{company.date}</Text>
 
                 {company.achievments.map((achievement, index) => (
                   <div data-aos="fade-up">

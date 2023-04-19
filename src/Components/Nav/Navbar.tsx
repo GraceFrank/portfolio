@@ -94,14 +94,14 @@ const NAV_ITEMS: Array<NavItem> = [
     label: "Experience",
     href: "#experience",
   },
-  {
-    label: "Portfolio",
-    href: "#portfolio",
-  },
-  {
-    label: "Contact",
-    href: "#contact",
-  },
+  // {
+  //   label: "Portfolio",
+  //   href: "#portfolio",
+  // },
+  // {
+  //   label: "Contact",
+  //   href: "#contact",
+  // },
   {
     label: "Contact",
     children: (
