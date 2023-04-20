@@ -10,6 +10,7 @@ import {
   Heading,
   HStack,
   Icon,
+  Box,
 } from "@chakra-ui/react";
 import { GoTriangleRight } from "react-icons/go";
 
@@ -82,6 +83,12 @@ export const ExperienceSection = () => {
 
   return (
     <Stack id="experience" gap={5} py={20} height={"100vh"} justify={"center"}>
+      <HStack gap={5}>
+        <Heading as="h2" color={purple}>
+          My Work Experience{" "}
+        </Heading>{" "}
+        <Box border="1px solid gray" width={"40%"} />
+      </HStack>
       <Tabs orientation="vertical" colorScheme="purple">
         <TabList>
           {companies.map((company) => (
